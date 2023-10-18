@@ -1,0 +1,6 @@
+[submodule "maths"]
+	path = maths
+	url = ./maths
+[submodule "physique"]
+	path = physique
+	url = ./physique
