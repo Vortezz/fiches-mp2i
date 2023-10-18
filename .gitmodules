@@ -1,6 +1,6 @@
 [submodule "maths"]
 	path = maths
-	url = ./maths
+	url = https://github.com/Vortezz/fiches-mp2i-maths
 [submodule "physique"]
 	path = physique
-	url = ./physique
+	url = https://github.com/Vortezz/fiches-mp2i-physique
