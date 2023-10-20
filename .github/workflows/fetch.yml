@@ -16,4 +16,8 @@ jobs:
         run: cd physique && git pull && cd ../
 
       - name: Push update
-        run: git push origin main
+        run: |
+          git config --global user.name 'Vortezz'
+          git config --global user.email 'vortezz@users.noreply.github.com'
+          git commit -am "Automated update [CI]"
+          git push
