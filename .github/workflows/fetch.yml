@@ -1,6 +1,10 @@
 name: Fetch last versions
 
-on: [push, workflow_dispatch]
+on: 
+  schedule:
+    0 1 * * *
+  
+  workflow_dispatch:
 
 jobs:
   fetch:
