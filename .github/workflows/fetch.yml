@@ -1,0 +1,19 @@
+name: Fetch last versions
+
+on: [push, workflow_dispatch]
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Update maths
+        run: cd maths && git pull && cd ../
+
+      - name: Update physics
+        run: cd physique && git pull && cd ../
+
+      - name: Push update
+        run: git push origin main
