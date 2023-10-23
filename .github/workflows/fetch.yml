@@ -13,11 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Update maths
-        run: cd maths && git pull && cd ../
-
-      - name: Update physics
-        run: cd physique && git pull && cd ../
+      - name: Pull & update submodules recursively
+        run: |
+          git submodule update --init --recursive
+          git submodule update --recursive --remote
 
       - name: Push update
         run: |
